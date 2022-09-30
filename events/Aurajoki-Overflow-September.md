@@ -1,9 +1,7 @@
-# Aurajoki Overflow
-
 ---
-Description: Aurajoki Overflow: Functional Programming - Sponsored by Arado
-Date: 21/09/2022
-URL: https://meetabit.com/events/aurajoki-overflow-functional-programming?li_fat_id=778c783c-2132-4fbf-83a4-a5d514a5fc3e
+title: Aurajoki Overflow - Functional Programming - Sponsored by Arado
+date: 21/09/2022
+url: https://meetabit.com/events/aurajoki-overflow-functional-programming?li_fat_id=778c783c-2132-4fbf-83a4-a5d514a5fc3e
 ---
 
 Welcome to the First Aurajoki Overflow Fall meetup!

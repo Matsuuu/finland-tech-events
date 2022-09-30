@@ -1,7 +1,7 @@
 {
-  "h1": "unsafeHTML() called with a non-string value",
-  "name": "unsafeHTML() called with a non-string value",
-  "menuLinkText": "unsafeHTML() called with a non-string value",
+  "h1": "Hello World",
+  "name": "Hello World",
+  "menuLinkText": "Hello World",
   "url": "/",
   "outputRelativeFilePath": "index.html",
   "sourceRelativeFilePath": "index.rocket.js",
@@ -13,5 +13,5 @@
     "event-loader": "#components/EventLoader.js::EventLoader"
   },
   "needsLoader": true,
-  "title": "unsafeHTML() called with a non-string value"
+  "title": "eventsToJson.map is not a function"
 }

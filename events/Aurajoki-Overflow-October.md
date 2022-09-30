@@ -1,9 +1,7 @@
-# Aurajoki Overflow
-
 ---
-Description: Aurajoki Overflow: All Things Data - Sponsored by Lyyti
-Date: 19/10/2022
-URL: https://meetabit.com/events/aurajoki-overflow-all-things-data-sponsored-by-lyyti
+title: Aurajoki Overflow - All Things Data - Sponsored by Lyyti
+date: 19/10/2022
+url: https://meetabit.com/events/aurajoki-overflow-all-things-data-sponsored-by-lyyti
 ---
 
 Welcome to the Aurajoki Overflow October meetup!

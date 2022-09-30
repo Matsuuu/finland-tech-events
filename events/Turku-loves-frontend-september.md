@@ -1,10 +1,9 @@
-# Turku <3 Frontend
+---
+title: Turku <3 Frontend - September meetup with Qalmari
+date: 28/09/2022
+url: https://meetabit.com/events/turku-3-frontend-september-meetup-with-qalmari
+---
 
----
-Description: Turku <3 Frontend: September meetup with Qalmari
-Date: 28/09/2022
-URL: https://meetabit.com/events/turku-3-frontend-september-meetup-with-qalmari
----
 
 Welcome to our September meetup with Qalmari!
 
