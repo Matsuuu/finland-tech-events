@@ -13,5 +13,5 @@
     "event-loader": "#components/EventLoader.js::EventLoader"
   },
   "needsLoader": true,
-  "title": "eventsToJson.map is not a function"
+  "title": "Cannot read properties of undefined (reading 'title')"
 }

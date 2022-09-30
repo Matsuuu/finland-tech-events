@@ -1,12 +1,13 @@
 import { readdirSync, readFileSync } from "fs";
+
 import { html, LitElement } from "lit";
-import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import yamlFront from "yaml-front-matter";
 
 const fileContent = getAllFilesInDir("events");
 const eventsJson = eventsToJson(fileContent);
+const eventData = manageEventsJsonData(eventsJson);
 
-console.log("Events as json", eventsJson);
+console.log(eventData);
 
 export class EventLoader extends LitElement {
 
@@ -16,7 +17,20 @@ export class EventLoader extends LitElement {
     }
 
     renderEvents() {
-        return eventsJson.map(event => html`
+        const upcomingEvents = eventData.filter(ev => !ev.isPast).map(this.renderEvent)
+        const pastEvents = eventData.filter(ev => ev.isPast).map(this.renderEvent);
+
+        return html`
+            <h2>Upcoming events</h2>
+            ${upcomingEvents}
+
+            <h2>Past events</h2>
+            ${pastEvents}
+        `
+    }
+
+    renderEvent(event) {
+        return html`
             <section>
                 <h2>${event.frontloadContent.title}</h2>
                 <ul>
@@ -28,7 +42,7 @@ export class EventLoader extends LitElement {
                     ${event.frontloadContent.__content}
                 </p>
             </section>
-        `)
+        `
     }
 
     render() {
@@ -38,6 +52,24 @@ export class EventLoader extends LitElement {
             ${this.renderEvents()}
         `
     }
+}
+
+function manageEventsJsonData(eventsJson) {
+    return eventsJson.map(event => {
+        const dateStringSplit = event.frontloadContent.date.split("/");
+        const year = dateStringSplit[2];
+        const month = dateStringSplit[1];
+        const day = dateStringSplit[0];
+
+        const today = new Date();
+        const dateAsObject = new Date(Date.UTC(year, month - 1, day));
+        return {
+            ...event,
+            dateAsObject,
+            isPast: today - dateAsObject > 0
+        };
+    })
+        .sort((a, b) => b.dateAsObject - a.dateAsObject);
 }
 
 /**
