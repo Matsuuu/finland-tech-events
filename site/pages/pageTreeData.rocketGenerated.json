@@ -1,7 +1,7 @@
 {
-  "h1": "Hello World",
-  "name": "Hello World",
-  "menuLinkText": "Hello World",
+  "h1": "unsafeHTML() called with a non-string value",
+  "name": "unsafeHTML() called with a non-string value",
+  "menuLinkText": "unsafeHTML() called with a non-string value",
   "url": "/",
   "outputRelativeFilePath": "index.html",
   "sourceRelativeFilePath": "index.rocket.js",
@@ -9,7 +9,9 @@
   "components": {
     "hello-wave": "#components/HelloWave.js::HelloWave",
     "hello-typer": "#components/HelloTyper.js::HelloTyper",
-    "my-counter": "#components/MyCounter.js::MyCounter"
+    "my-counter": "#components/MyCounter.js::MyCounter",
+    "event-loader": "#components/EventLoader.js::EventLoader"
   },
-  "needsLoader": true
+  "needsLoader": true,
+  "title": "unsafeHTML() called with a non-string value"
 }
